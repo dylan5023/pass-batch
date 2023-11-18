@@ -1,4 +1,8 @@
+server:
+  port: 8081
 spring:
+  application:
+    name: pass-batch
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/pass_local?zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&serverTimezone=America/Vancouver
     username: pass_local_user
@@ -8,7 +12,13 @@ spring:
       maximum-pool-size: 20
 
   batch:
+    job:
+      enabled: false
     jdbc:
       initialize-schema: always
+
+kakaotalk:
+  host: https://kapi.kakao.com
+  token: YOUR_ACCESS_TOKEN
 
 
